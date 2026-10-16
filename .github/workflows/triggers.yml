@@ -3,7 +3,7 @@ name: Trigger events
 on:
   push:
     branches:
-      - main
+      - test-branch-v1
   pull_request:
     types: 
       - opened
