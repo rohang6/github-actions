@@ -1,0 +1,24 @@
+name: Trigger events
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: 
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      - "Notes/*.md"
+      - "!Notes/*.txt"
+    schedule:
+      - cron: '0/5 * * * *' 
+    workflow_dispatch:
+jobs:
+  echo-event:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Echo Event
+        run: echo "Event triggered by ${{ github.event_name }} event"
+    
