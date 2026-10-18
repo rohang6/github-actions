@@ -30,7 +30,7 @@ jobs:
           ENV_SECRET: ${{ secrets.ENV_SECRET }}
           ENV_VARIABLE: ${{ vars.ENV_VARIABLE }}
         run: |
-          echo "FOO = $FOO
+          echo "FOO = $FOO"
           echo "REPO_SECRET = $REPO_SECRET"
           echo "ENV_SECRET = $ENV_SECRET"
           echo "ENV_VARIABLE = $ENV_VARIABLE"
