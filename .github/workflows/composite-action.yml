@@ -9,7 +9,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - id: composite-action-instance
-              uses: ./authoring-action/composite-action
+              uses: ./authoring-actions/composite-action
               with:
                 who-to-greet: "From composite action in hello-world-1!"
             - env:
